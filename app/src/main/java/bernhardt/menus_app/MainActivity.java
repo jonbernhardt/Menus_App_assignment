@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                emailIntent.setType("*/*");
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+                emailIntent.setData(Uri.parse("mailto:"));
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Study Partner");
                 if (emailIntent.resolveActivity(getPackageManager()) != null) {
                     startActivity(emailIntent);
@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity
             return true;
         }
         if (id == R.id.action_email) {
-            Intent emailIntent = new Intent(Intent.ACTION_SEND);
-            emailIntent.setType("*/*");
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+            emailIntent.setData(Uri.parse("mailto:"));
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Study Partner");
             if (emailIntent.resolveActivity(getPackageManager()) != null) {
                 startActivity(emailIntent);
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity
         }
         if (id == R.id.action_sms) {
             Intent textIntent = new Intent(Intent.ACTION_VIEW);
-            textIntent.setData(Uri.parse("sms:" + "5079933334"));
+            textIntent.setData(Uri.parse("smsto:"));
             textIntent.putExtra("sms_body", "Hi there");
             if (textIntent.resolveActivity(getPackageManager()) != null) {
                 startActivity(textIntent);
