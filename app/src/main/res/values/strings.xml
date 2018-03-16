@@ -10,4 +10,10 @@
     <string name="action_sms">Message</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="action_settings">Settings</string>
+    <string name="app_title">Study Mates</string>
+    <string name="nav_message">Send Message</string>
+    <string name="nav_email">Send Email</string>
+    <string name="nav_add">Add mate</string>
+    <string name="nav_delete">Delete mate</string>
+    <string name="contactEmail">jbernhardt@css.edu</string>
 </resources>
